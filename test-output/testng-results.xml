@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="4" total="8" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TubbrTestSuite" duration-ms="53506" started-at="2018-08-06T14:07:02Z" finished-at="2018-08-06T14:07:55Z">
+    <groups>
+    </groups>
+    <test name="phoneTest" duration-ms="53506" started-at="2018-08-06T14:07:02Z" finished-at="2018-08-06T14:07:55Z">
+      <class name="com.tubbrApp.LogoutTest">
+        <test-method status="PASS" signature="logoutTubbr()[pri:0, instance:com.tubbrApp.LogoutTest@cb644e]" name="logoutTubbr" duration-ms="7986" started-at="2018-08-06T19:37:47Z" finished-at="2018-08-06T19:37:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutTubbr -->
+      </class> <!-- com.tubbrApp.LogoutTest -->
+      <class name="com.tubbrApp.OtpVerificationTest">
+        <test-method status="PASS" signature="loginByPhoneno(java.lang.String)[pri:0, instance:com.tubbrApp.OtpVerificationTest@5cb9f472]" name="loginByPhoneno" duration-ms="41515" started-at="2018-08-06T19:37:06Z" finished-at="2018-08-06T19:37:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[73bee0ca]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginByPhoneno -->
+      </class> <!-- com.tubbrApp.OtpVerificationTest -->
+      <class name="com.tubbrApp.LaunchPageTest">
+        <test-method status="PASS" signature="setUpAppium(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.tubbrApp.LaunchPageTest@6e1567f1]" name="setUpAppium" is-config="true" duration-ms="41650" started-at="2018-08-06T19:36:20Z" finished-at="2018-08-06T19:37:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Android 7.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[73bee0ca]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[8200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpAppium -->
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:com.tubbrApp.LaunchPageTest@6e1567f1]" name="setUpPage" is-config="true" duration-ms="177" started-at="2018-08-06T19:37:02Z" finished-at="2018-08-06T19:37:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:com.tubbrApp.LogoutTest@cb644e]" name="setUpPage" is-config="true" duration-ms="343" started-at="2018-08-06T19:37:02Z" finished-at="2018-08-06T19:37:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:com.tubbrApp.OtpVerificationTest@5cb9f472]" name="setUpPage" is-config="true" duration-ms="226" started-at="2018-08-06T19:37:02Z" finished-at="2018-08-06T19:37:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method status="PASS" signature="checkLaunchPage()[pri:0, instance:com.tubbrApp.LaunchPageTest@6e1567f1]" name="checkLaunchPage" duration-ms="3129" started-at="2018-08-06T19:37:03Z" finished-at="2018-08-06T19:37:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkLaunchPage -->
+        <test-method status="PASS" signature="signupPage()[pri:0, instance:com.tubbrApp.LaunchPageTest@6e1567f1]" name="signupPage" duration-ms="116" started-at="2018-08-06T19:37:06Z" finished-at="2018-08-06T19:37:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signupPage -->
+        <test-method status="PASS" signature="tearDownAppium()[pri:0, instance:com.tubbrApp.LaunchPageTest@6e1567f1]" name="tearDownAppium" is-config="true" duration-ms="1430" started-at="2018-08-06T19:37:55Z" finished-at="2018-08-06T19:37:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAppium -->
+      </class> <!-- com.tubbrApp.LaunchPageTest -->
+    </test> <!-- phoneTest -->
+  </suite> <!-- TubbrTestSuite -->
+</testng-results>

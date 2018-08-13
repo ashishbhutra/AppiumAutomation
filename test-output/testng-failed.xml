@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TubbrTestSuite]">
+  <parameter name="udid" value="73bee0ca"/>
+  <parameter name="platform" value="Android 7.0"/>
+  <parameter name="systemPort" value="8200"/>
+  <test name="phoneTest(failed)">
+    <parameter name="udid" value="73bee0ca"/>
+    <classes>
+      <class name="com.tubbrApp.OtpVerificationTest">
+        <methods>
+          <include name="loginByPhoneno" invocation-numbers="0"/>
+          <include name="setUpPage"/>
+        </methods>
+      </class> <!-- com.tubbrApp.OtpVerificationTest -->
+      <class name="com.tubbrApp.LogoutTest">
+        <methods>
+          <include name="logoutTubbr"/>
+          <include name="setUpPage"/>
+        </methods>
+      </class> <!-- com.tubbrApp.LogoutTest -->
+      <class name="com.tubbrApp.LaunchPageTest">
+        <methods>
+          <include name="setUpAppium"/>
+          <include name="setUpPage"/>
+          <include name="tearDownAppium"/>
+        </methods>
+      </class> <!-- com.tubbrApp.LaunchPageTest -->
+    </classes>
+  </test> <!-- phoneTest(failed) -->
+</suite> <!-- Failed suite [TubbrTestSuite] -->
