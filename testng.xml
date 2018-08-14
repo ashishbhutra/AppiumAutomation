@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
-  
- <suite name="Suite" thread-count="2"  parallel="tests">
-    <suite-files>
-        <suite-file path="suitea.xml" />
-        <suite-file path="suiteb.xml" />
-    </suite-files>
-</suite> <!-- Suite -->
+<suite name="TubbrTestSuite">
+    <!--  parameter name="platform" value="Android 6.0"/>
+        <parameter name="udid" value="192.168.166.101:5555"/>
+        <parameter name="systemPort" value="8200"/-->
+    <test name="Test1" preserve-order="true">
+        <classes>
+            <class name="com.tubbrApp.LaunchPageTest"/>
+            <class name="com.tubbrApp.LoginTest"/>
+        </classes>
+    </test>
+     <test name="Test2" preserve-order="true">
+        <classes>
+            <class name="com.tubbrApp.FourSliderTest"/>
+            <class name="com.tubbrApp.LogoutTest"/>
+        </classes>
+    </test>
+</suite>

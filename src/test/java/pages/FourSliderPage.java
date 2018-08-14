@@ -6,7 +6,8 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class FourSliderPage extends BasePage {
 
-	@AndroidFindBy(id ="com.tubbr:id/four_slide_activity_title_top_header")
+	//@AndroidFindBy(id ="com.tubbr:id/four_slide_activity_title_top_header")
+	@AndroidFindBy(xpath = "//android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.TextView")
 	private MobileElement fourSlidePageTitle;
 	
 	@AndroidFindBy(id="com.tubbr:id/img_proceed")

@@ -2,13 +2,16 @@ package com.tubbrApp;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
-import io.appium.java_client.remote.MobileCapabilityType;
+//import io.appium.java_client.remote.AndroidMobileCapabilityType;
+//import io.appium.java_client.remote.MobileCapabilityType;
+
+//import io.appium.java_client.remote.MobileCapabilityType;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.*;
 
-import java.io.File;
+//import java.io.File;
+//import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -47,34 +50,42 @@ public abstract class TestBase {
      */
 
     @BeforeSuite(alwaysRun = true)
-    @Parameters({"platform", "udid", "systemPort"})
-    public void setUpAppium(@Optional String platform,@Optional String udid,@Optional String systemPort) throws MalformedURLException {
+    //@Parameters({"platform", "udid", "systemPort"})
+    public void setUpAppium() throws MalformedURLException {
 
         final String URL_STRING = "http://127.0.0.1:4723/wd/hub";
 
         URL url = new URL(URL_STRING);
-        String[] platformInfo = platform.split(" ");
+       // String[] platformInfo = platform.split(" ");
      
         //apk path and mane
-        File classpathRoot = new File(System.getProperty("user.dir"));
+        /*File classpathRoot = new File(System.getProperty("user.dir"));
 		File appDir = new File(classpathRoot, "src/test/resources/apps/");
-		File app = new File(appDir, "Alpha TUBBR_vAlpha 1.1.8.apk");
+		File app = new File(appDir, "Alpha TUBBR_vAlpha 1.2.24.apk");*/
 		
 		/**Set Desired Capabilities
 		 * Setting Dependencies to run parallel test
 		*/
 		DesiredCapabilities capabilities = new DesiredCapabilities(); 
-		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, platformInfo[0]);
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, platformInfo[1]);
-		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
-		capabilities.setCapability(MobileCapabilityType.UDID, udid);
-		capabilities.setCapability(AndroidMobileCapabilityType.SYSTEM_PORT, systemPort);
-		capabilities.setCapability(MobileCapabilityType.APP, app);
+		//capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
+		//capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, platformInfo[0]);
+		//capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, platformInfo[1]);
+		//capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
+		//capabilities.setCapability(MobileCapabilityType.UDID, udid);
+		//capabilities.setCapability(AndroidMobileCapabilityType.SYSTEM_PORT, systemPort);
+		//capabilities.setCapability(MobileCapabilityType.APP, app);
 		//capabilities.setCapability(MobileCapabilityType.AUTO_WEBVIEW, true);
 		//capabilities.setCapability("appPackage", "com.tubbr");
 		//capabilities.setCapability("appActivity", "com.tubbr.tubbrapp.activity.SplashScreen");
-		capabilities.setCapability(MobileCapabilityType.NO_RESET, false);
+		//capabilities.setCapability(MobileCapabilityType.NO_RESET, false);
+				/*capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
+				capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Ändroid");
+				capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "6.0");
+				capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
+				capabilities.setCapability(MobileCapabilityType.UDID, "192.168.166.101:5555");
+				capabilities.setCapability(MobileCapabilityType.APP, app);
+				capabilities.setCapability("appPackage", "com.tubbr");
+				capabilities.setCapability("appActivity", "com.tubbr.tubbrapp.activity.SplashScreen");*/
 		driver = new AndroidDriver<MobileElement>(url, capabilities);
 		
         //Implicit wait to wait for the Elements to show up
