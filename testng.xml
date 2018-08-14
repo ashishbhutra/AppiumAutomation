@@ -1,52 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<!-- suite thread-count="2" name="AndroidNativeSuite" parallel="tests"-->
-<suite name="TubbrTestSuite">
-	<!--  parameter name="platform" value="Android 8.0"/>
-    <parameter name="udid" value="ce0517151287361702"/>
-    <parameter name="systemPort" value="8201"/-->
-     <parameter name="platform" value="Android 7.0"/>
-     <!--  parameter name="udid" value="192.168.166.101:5555"/-->
-     <parameter name="udid" value="73bee0ca"/>
-     <parameter name="systemPort" value="8200"/>
- <!--  test name="Test1">
-        <parameter name="platform" value="Android 6.0"/>
-        <parameter name="udid" value="192.168.56.101:5555"/>
-        <parameter name="systemPort" value="8200"/>
-        <classes>
-            <class name="com.tubbrApp.LaunchPageTest"/>
-            <class name="com.tubbrApp.LoginTest"/>
-        </classes>
-    </test-->
-   <!--  <test name="First Launch Test" preserve-order="true">
+
   
-        <classes>
-            <class name="com.tubbrApp.LaunchPageTest"/>
-            <class name="com.tubbrApp.LoginTest"/>
-        </classes>
-    </test> 
-    
-    <test name="FourSlider Test" preserve-order="true">
-        <classes>
-            <class name="com.tubbrApp.FourSliderTest"/>
-            <class name="com.tubbrApp.LogoutTest"/>
-        </classes>
-    </test> 
-    
-      <test name="googleTest" preserve-order="true">
-        <classes>
-            <class name="com.tubbrApp.LaunchPageTest"/>
-            <class name="com.tubbrApp.GoogleLoginTest"/>
- 
-        </classes>
-    </test>  Test -->
-    <test name="phoneTest" preserve-order="true">
-    <parameter name="udid" value="73bee0ca"/>
-        <classes>
-            <class name="com.tubbrApp.LaunchPageTest"/>
-            <class name="com.tubbrApp.OtpVerificationTest"/>
-            <class name="com.tubbrApp.LogoutTest"/>
- 
-        </classes>
-    </test>
-  </suite> <!-- AndroidNativeSuite -->
+ <suite name="Suite" thread-count="2"  parallel="tests">
+    <suite-files>
+        <suite-file path="suitea.xml" />
+        <suite-file path="suiteb.xml" />
+    </suite-files>
+</suite> <!-- Suite -->
